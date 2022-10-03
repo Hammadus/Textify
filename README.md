@@ -4,6 +4,8 @@ Extracts the article text content only.
 
 ## Usage
 
+- This is intended for educational purposes only.
+
 - Inspect element on the news article.
 
 - Open the console tab and paste the javascript for that website, hit enter.
