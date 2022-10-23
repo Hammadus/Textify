@@ -4,13 +4,13 @@ Extracts the article text content only.
 
 ## Usage
 
-- This is intended for educational purposes, and does not offer a way passed paywalls
+- This does not offer a way passed paywalls. Consider supporting sites too. 
 
 - Inspect element on the news article.
 
 - Open the console tab and paste the javascript for that website, hit enter.
 
-- File will get downloaded as article.txt to downloads directory.
+- File will get downloaded as "{The Title}".txt to downloads directory.
 
 - Save on inc, and remove unnecessary page elements when printing/saving
 
