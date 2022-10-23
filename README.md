@@ -9,13 +9,16 @@ The Server uses experimental node fetch, installing lates node is suggested. As 
 
 ## Usage
 
+.
 ├── Client
 │   ├── bloomBerg.js
 │   ├── cnn.js
 │   ├── newsweek.js
 │   ├── nytimes.js
 │   └── reuters.js
-├── Server
+├── LICENSE
+├── README.md
+└── Server
     ├── index.js
     ├── package.json
     └── package-lock.json
