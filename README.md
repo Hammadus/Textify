@@ -9,20 +9,6 @@ The Server uses experimental node fetch, installing lates node is suggested. As 
 
 ## Usage
 
-.
-├── Client
-│   ├── bloomBerg.js
-│   ├── cnn.js
-│   ├── newsweek.js
-│   ├── nytimes.js
-│   └── reuters.js
-├── LICENSE
-├── README.md
-└── Server
-    ├── index.js
-    ├── package.json
-    └── package-lock.json
-
 - This does not offer a way passed paywalls. Consider supporting sites too. 
 
 - Inspect element on the news article.
