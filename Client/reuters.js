@@ -1,4 +1,4 @@
-let article = document.querySelectorAll("#article-usa-election-surveys-1 > div.story-content-container > div > div > p");
+let article = document.querySelectorAll("#main-content > article > div > div.article__main__33WV2 > div > div > div > p'");
 let text = []
 Array.from(article).forEach(e => { text.push(e.innerText) } );
 
