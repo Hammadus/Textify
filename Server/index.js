@@ -1,22 +1,24 @@
 const cheerio = require('cheerio');
-let URL = 'https://www.newsweek.com/democrats-propose-pulling-troops-saudi-arabia-revenge-opec-move-1749412';
-let $ = null;
+let url = 'https://www.newsweek.com/democrats-propose-pulling-troops-saudi-arabia-revenge-opec-move-1749412';
+let $;
 
 function init() {
-	let html = getHTML(URL);
-	$ = cheerio.load(html);
-	let domain = (new  URL(URL));	
-	let host = getHost(domain.hostname);
-	host(html);
+	// 1) gets the html and loads it into a cheerio object
+	// 2) calls the respecitve function to get html for that site
+	getHTML();
+	let ulrOBJ = new URL(url);	
+	let host = selectHost(ulrOBJ.hostname);
+	host.call();
 };
 
 function newsweek () {
-	let text = [];
-	let article = $("#v_article > div.article-body.v_text > p")
+	// 1) filters selectors for this specific newsite
+	let article = $("#v_article > div.article-body.v_text > p");
 	console.log(article.text());
 };
 
-const getHost = function (domain) {
+const selectHost = function (domain) {
+	// 1) gets the domain name to know which funtion&selectors to apply
 	switch(domain) {
 		case 'www.newsweek.com':
 			return newsweek;
@@ -26,11 +28,19 @@ const getHost = function (domain) {
 	}
 };
 
-const getHTML = async () =>{
-	const response = await fetch(URL);
-	const body = await response.text();
-	console.log(body);
-	return body;
+const getHTML = async (url) =>{
+	// 1) uses experimental fetch to get the text response from url
+	try {
+		const response = await fetch(url);
+		if(response.status === 200) {
+			const body = await response.text();
+			$ = cheerio.load(body);
+		} else {
+			throw 'Error fetching site';
+		}
+	} catch (error) {
+		console.log(error);
+	}
 };
 
 init();
