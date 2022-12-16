@@ -1,6 +1,4 @@
-let article = document.querySelectorAll(
-  "#main-content > article > div > div.article__main__33WV2 > div > div > div > p"
-);
+let article = document.querySelectorAll("span.abc__textblock > p");
 let text = [];
 Array.from(article).forEach((e) => {
   text.push(e.innerText);

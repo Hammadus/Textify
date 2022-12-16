@@ -1,6 +1,5 @@
-let article = document.querySelectorAll(
-  "#main-content > article > div > div.article__main__33WV2 > div > div > div > p"
-);
+/*COMPLAINING: COULD BE MY BROWSER?*/
+let article = document.querySelectorAll(".caas-body > p");
 let text = [];
 Array.from(article).forEach((e) => {
   text.push(e.innerText);

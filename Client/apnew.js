@@ -1,5 +1,5 @@
 let article = document.querySelectorAll(
-  "#main-content > article > div > div.article__main__33WV2 > div > div > div > p"
+  "p.Component-root-0-2-67"
 );
 let text = [];
 Array.from(article).forEach((e) => {
